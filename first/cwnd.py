@@ -36,5 +36,5 @@ def plot_cwnd(times1, cwnds1, times2, cwnds2):
     plt.show()
 
 if __name__ == "__main__":
-    times1, cwnds1, times2, cwnds2 = parse_cwnd_file("/home/matteo/ns-3-dev/scratch/ns-3-assignments/first/first-assignment-tcp-cwnd.txt")
+    times1, cwnds1, times2, cwnds2 = parse_cwnd_file("/home/matteo/ns-3-dev/scratch/ns-3-first-assignment/first/first-assignment-tcp-cwnd.txt")
     plot_cwnd(times1, cwnds1, times2, cwnds2)

@@ -125,7 +125,7 @@ int main (int argc, char *argv[])
   FlowMonitorHelper flowmon;
   Ptr<FlowMonitor> monitor = flowmon.InstallAll();
 
-  pointToPoint.EnablePcapAll ("scratch/first/first-assignment-tcp");
+  pointToPoint.EnablePcapAll ("scratch/ns-3-first-assignment/first/first-assignment-tcp");
 
   Simulator::Stop (Seconds (11.0));
   Simulator::Run ();
