@@ -133,7 +133,7 @@ int main(int argc, char *argv[])
   monitor->CheckForLostPackets();
 
   // Specify the path to save the file
-  monitor->SerializeToXmlFile("scratch/ns-3-first-assignment/first/first-ass-tcp.xml", true, true);
+  monitor->SerializeToXmlFile("scratch/ns-3-first-assignment/first/first-assignment-tcp.xml", true, true);
 
   Simulator::Destroy();
   return 0;

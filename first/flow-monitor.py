@@ -47,7 +47,7 @@ def parse_flow_monitor_to_table(filename):
     return df
 
 if __name__ == "__main__":
-    filename = "/home/matteo/ns-3-dev/scratch/ns-3-first-assignment/first/first-ass-tcp.xml"
+    filename = "/home/matteo/ns-3-dev/scratch/ns-3-first-assignment/first/first-assignment-tcp.xml"
     df = parse_flow_monitor_to_table(filename)
     print(df)
     df.to_latex('/home/matteo/ns-3-dev/scratch/ns-3-first-assignment/first/data.tex', index=False)
