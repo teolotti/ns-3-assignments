@@ -37,16 +37,16 @@ int main(int argc, char *argv[])
   Config::SetDefault("ns3::TcpL4Protocol::RecoveryType",
                        TypeIdValue(TypeId::LookupByName("ns3::TcpClassicRecovery")));
 
-  //Create 4 nodes
+  // Create 4 nodes
   NodeContainer nodes;
   nodes.Create(4);
 
-  //Create point-to-point links
+  // Create point-to-point links
   PointToPointHelper pointToPoint;
   pointToPoint.SetDeviceAttribute("DataRate", StringValue ("5Mbps"));
   pointToPoint.SetChannelAttribute("Delay", StringValue ("2ms"));
 
-  //Install devices on nodes
+  // Install devices on nodes
   NetDeviceContainer devices01, devices23;
   devices01 = pointToPoint.Install(nodes.Get(0), nodes.Get(1));
   devices23 = pointToPoint.Install(nodes.Get(2), nodes.Get(3));
@@ -132,7 +132,6 @@ int main(int argc, char *argv[])
 
   monitor->CheckForLostPackets();
 
-  // Specify the path to save the file
   monitor->SerializeToXmlFile("scratch/ns-3-first-assignment/first/first-assignment-tcp.xml", true, true);
 
   Simulator::Destroy();
